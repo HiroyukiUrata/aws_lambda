@@ -1,0 +1,10 @@
+version: '2'
+services:
+  app:
+    build: .
+    volumes:
+      - './deploy:/home/deploy'
+    command: >
+      bash -c "pip3 install -r /home/deploy/requirements.txt -t /home/deploy/python &&
+      cd /home/deploy &&
+      /usr/bin/zip -r PIL.zip python"
