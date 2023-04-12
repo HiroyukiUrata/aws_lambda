@@ -1,3 +1,4 @@
 # local env files
 /s3triggerfunction/.env
 
+*/*/deploy/python/*

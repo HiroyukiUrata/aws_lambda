@@ -1,0 +1,15 @@
+必須条件：Docker,DockerComposeがインストールされていること
+
+フォルダ構成
+
+template
+├─docker-compose.yml
+├─Dockerfile
+└─deploy
+    └── requirements.txt
+        └── python
+		
+１．\deploy\requirements.txtにインポートするライブラリ名を記述
+２．Dockerfileの存在するフォルダで、以下のコマンドをたたくdocker-compose
+	docker-compose up --build
+３．\deployに作成されたZipをAWS Lambdaにアップロード
